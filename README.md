@@ -1,7 +1,7 @@
- <H3>ENTER YOUR NAME</H3>
-<H3>ENTER YOUR REGISTER NO.</H3>
+ <H3>Vineesh M</H3>
+<H3>212221230122</H3>
 <H3>EX. NO.8</H3>
-<H3>DATE:</H3>
+<H3>DATE:27/04/2024</H3>
 <H1 ALIGN =CENTER>Implementation of Speech Recognition</H1>
 <H3>Aim:</H3> 
  To implement the conversion of live speech to text.<BR>
@@ -22,9 +22,25 @@ Step 11: Perform speech recognition with exceptional handling:<Br>
 •	A generic exception block captures any other unexpected errors.<Br>
 <H3>Program:</H3>
 
-Insert your code her
+```
+import pyaudio
+import speech_recognition
+r = speech_recognition.Recognizer()
+t = 3
+print("Start speaking")
+with speech_recognition.Microphone() as mic:
+    audio = r.listen(mic,timeout = t)
+try:
+    text = r.recognize_google(audio)
+    print("You said:", text)
+except Exception as e:
+    print(e)
+```
 
 <H3> Output:</H3>
-Show the results here
+
+![o1 (3)](https://github.com/Vineesh-AI-DS/Ex-8--AAI/assets/93427254/02a6dc26-a782-4d04-b7d3-1c7eaa2a5be3)
+
 
 <H3> Result:</H3>
+Thus the python program to implement the conversion of live speech recognition is completed
